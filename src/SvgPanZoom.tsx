@@ -191,6 +191,7 @@ export default class SvgPanZoom extends Component<Props, State> {
       },
       onPanResponderTerminationRequest: (evt, gestureState) => true,
       onPanResponderRelease: (evt, gestureState) => {
+        this.prTargetSelf = null;
         this.setState({
           isScaling: false,
           isMoving: false,
