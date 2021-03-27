@@ -35,8 +35,8 @@
   },
   "homepage": "https://github.com/SuperDuperTrivia/react-svg-zoom#readme",
   "peerDependencies": {
-    "react": "^16.2.0",
-    "react-native": "^0.64.0"
+    "react": ">=16.2.0",
+    "react-native": ">=0.63.0"
   },
   "devDependencies": {
     "@types/react": "^16.0.27",
