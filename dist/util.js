@@ -18,13 +18,15 @@ export function calcCenter(x1, y1, x2, y2) {
         y: mid.y
     };
 }
+/*
 export function maxOffset(offset, windowDimension, imageDimension) {
-    let max = windowDimension - imageDimension;
-    if (max >= 0) {
-        return 0;
-    }
-    return offset < max ? max : offset;
+  let max = windowDimension - imageDimension;
+  if (max >= 0) {
+    return 0;
+  }
+  return offset < max ? max : offset;
 }
+*/
 export function createIdentityTransform() {
     return {
         scaleX: 1,

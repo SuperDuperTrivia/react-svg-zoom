@@ -1,10 +1,9 @@
 import { ViewTransform, ViewDimensions } from './interfaces';
-export declare function calcDistance(x1: any, y1: any, x2: any, y2: any): number;
-export declare function calcCenter(x1: any, y1: any, x2: any, y2: any): {
+export declare function calcDistance(x1: number, y1: number, x2: number, y2: number): number;
+export declare function calcCenter(x1: number, y1: number, x2: number, y2: number): {
     x: number;
     y: number;
 };
-export declare function maxOffset(offset: any, windowDimension: any, imageDimension: any): any;
 export declare function createIdentityTransform(): {
     scaleX: number;
     skewX: number;

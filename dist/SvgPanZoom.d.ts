@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { PanResponderInstance, Animated, ViewStyle } from "react-native";
+import { View, PanResponderInstance, Animated, ViewStyle, LayoutChangeEvent, PanResponderGestureState } from "react-native";
 import { Point, ViewTransform, ViewDimensions } from "./interfaces";
 /*********************************************************
  * Interfaces
@@ -37,7 +37,7 @@ export interface State {
  *********************************************************/
 export default class SvgPanZoom extends Component<Props, State> {
     static defaultProps: Partial<Props>;
-    mainViewRef: any;
+    mainViewRef?: View | null;
     prInstance: PanResponderInstance;
     prTargetSelf: any;
     prTargetOuter: any;
@@ -45,9 +45,9 @@ export default class SvgPanZoom extends Component<Props, State> {
     dropNextEvt: number;
     componentDidMount(): void;
     render(): JSX.Element;
-    _onLayout: (event: any) => void;
-    getInitialViewTransform(canvasWidth: number, canvasHeight: any, scale: number): ViewTransform;
+    _onLayout: (event: LayoutChangeEvent) => void;
+    getInitialViewTransform(canvasWidth: number, canvasHeight: number, scale: number): ViewTransform;
     zoomToPoint: (x: number, y: number, scale: number, duration?: number) => void;
-    processPinch: (x1: any, y1: any, x2: any, y2: any) => void;
-    processTouch: (gestureState: any) => void;
+    processPinch: (x1: number, y1: number, x2: number, y2: number) => void;
+    processTouch: (gestureState: PanResponderGestureState) => void;
 }
